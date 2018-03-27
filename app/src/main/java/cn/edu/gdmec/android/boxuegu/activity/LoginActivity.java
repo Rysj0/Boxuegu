@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "请输入密码", Toast.LENGTH_SHORT).show();
                     return;
                 } else if (md5Psw.equals(spPsw)) {
-                    Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "qqq，登录成功", Toast.LENGTH_SHORT).show();
                     //保存登录状态和登录用户名
                     saveloginStatus(true, username);
                     Intent data = new Intent();
