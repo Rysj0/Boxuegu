@@ -1,4 +1,4 @@
-package cn.edu.gdmec.android.boxuegu.activity;
+package cn.edu.gdmec.android.boxuegu.Activity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -42,7 +42,7 @@ public class SplashActivity extends AppCompatActivity {
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
+                Intent intent = new Intent(SplashActivity.this,MainActivity.class);
                 startActivity(intent);
                 SplashActivity.this.finish();
             }

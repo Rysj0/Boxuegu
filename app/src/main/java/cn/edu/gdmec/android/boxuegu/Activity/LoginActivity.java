@@ -1,4 +1,4 @@
-package cn.edu.gdmec.android.boxuegu.activity;
+package cn.edu.gdmec.android.boxuegu.Activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 
 import cn.edu.gdmec.android.boxuegu.R;
-import cn.edu.gdmec.android.boxuegu.utils.MD5Utils;
+import cn.edu.gdmec.android.boxuegu.Utils.MD5Utils;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //跳转到找回密码页面
-                Intent intent = new Intent(LoginActivity.this,FindPswActivity.class);
+                Intent intent = new Intent(LoginActivity.this,ActivityFindPswActivity.class);
                 startActivity(intent);
             }
         });

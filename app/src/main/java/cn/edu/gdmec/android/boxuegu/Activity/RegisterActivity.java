@@ -1,4 +1,4 @@
-package cn.edu.gdmec.android.boxuegu.activity;
+package cn.edu.gdmec.android.boxuegu.Activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -15,7 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import cn.edu.gdmec.android.boxuegu.R;
-import cn.edu.gdmec.android.boxuegu.utils.MD5Utils;
+import cn.edu.gdmec.android.boxuegu.Utils.MD5Utils;
 
 public class RegisterActivity extends AppCompatActivity {
 
