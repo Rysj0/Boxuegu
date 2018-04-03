@@ -48,7 +48,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     }
     private void setMain() {
         this.getSupportFragmentManager().beginTransaction().add(R.id.main_body,new MyinfoFragment()).commit();
-        setSelectStatus(0);
+        setSelectStatus(2);
     }
 
     private void initView() {
@@ -71,7 +71,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     private void setSelectStatus(int index){
         switch (index){
-            case 2:
+            case 0:
                 bottom_bar_image_course.setImageResource(R.drawable.main_course_icon_selected);
                 bottom_bar_text_course.setTextColor(Color.parseColor("#0097F7"));
 
@@ -91,7 +91,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 bottom_bar_image_course.setImageResource(R.drawable.main_course_icon);
                 bottom_bar_image_myinfo.setImageResource(R.drawable.main_my_icon);
                 break;
-            case 0:
+            case 2:
                 bottom_bar_image_myinfo.setImageResource(R.drawable.main_my_icon_selected);
                 bottom_bar_text_myinfo.setTextColor(Color.parseColor("#0097F7"));
 
