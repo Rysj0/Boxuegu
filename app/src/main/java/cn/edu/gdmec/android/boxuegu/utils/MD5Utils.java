@@ -1,4 +1,4 @@
-package cn.edu.gdmec.android.boxuegu.Utils;
+package cn.edu.gdmec.android.boxuegu.utils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
