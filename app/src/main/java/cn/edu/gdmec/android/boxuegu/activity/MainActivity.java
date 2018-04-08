@@ -20,7 +20,8 @@ import android.widget.Toast;
 import cn.edu.gdmec.android.boxuegu.R;
 import cn.edu.gdmec.android.boxuegu.fragment.CourseFragment;
 import cn.edu.gdmec.android.boxuegu.fragment.ExercisesFragment;
-import cn.edu.gdmec.android.boxuegu.fragment.MyInfoFragment;
+import cn.edu.gdmec.android.boxuegu.fragment.MyinfoFragment;
+import cn.edu.gdmec.android.boxuegu.fragment.MyinfoFragment;
 import cn.edu.gdmec.android.boxuegu.utils.AnalysisUtils;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -155,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bottom_bar_myinfo_btn:
                 clearBottomImageState();
                 setSelectedStatus(2);
-                getSupportFragmentManager().beginTransaction().replace(R.id.main_body, new MyInfoFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_body, new MyinfoFragment()).commit();
                 break;
         }
     }

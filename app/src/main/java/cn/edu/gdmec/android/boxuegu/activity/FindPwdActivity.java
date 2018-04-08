@@ -25,6 +25,7 @@ public class FindPwdActivity extends AppCompatActivity {
     private EditText et_user_name;
     private EditText et_validate_name;
     private Button btn_validate;
+    private Button btn_validate1;
     private TextView tv_reset_pwd;
     private EditText et_new_pwd;
     private String from;
@@ -49,6 +50,7 @@ public class FindPwdActivity extends AppCompatActivity {
         et_validate_name = (EditText) findViewById(R.id.et_validate_name);
         tv_reset_pwd = (TextView) findViewById(R.id.tv_reset_pwd);
         btn_validate = (Button) findViewById(R.id.btn_validate);
+        btn_validate1 = (Button) findViewById(R.id.btn_validate1);
         tv_reset_pwd = findViewById(R.id.tv_reset_pwd);
         et_new_pwd = (EditText)findViewById(R.id.et_findnew_pwd);
 
@@ -66,6 +68,12 @@ public class FindPwdActivity extends AppCompatActivity {
             }
         });
         btn_validate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                submit();
+            }
+        });
+        btn_validate1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 submit();
