@@ -25,6 +25,7 @@
         <activity android:name=".activity.ModifyPwdActivity"></activity>
         <activity android:name=".activity.ActivityUserInfoActivity"/>
         <activity android:name=".activity.ActivityChangeUserInfoActivity"/>
+        <activity android:name=".activity.ActivityExercisesDetailActivity"/>
 
     </application>
 

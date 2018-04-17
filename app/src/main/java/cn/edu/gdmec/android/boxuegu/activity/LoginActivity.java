@@ -92,7 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                     data.putExtra("isLogin", true);
                     data.putExtra("userName", userName);
                     setResult(RESULT_OK, data);
-                    finish();
+                    LoginActivity.this.finish();
                     return;
                 } else if (!TextUtils.isEmpty(spPsw) && !md5Psw.equals(spPsw)) {
                     Toast.makeText(LoginActivity.this, "输入的用户名和密码不一致", Toast.LENGTH_SHORT).show();
