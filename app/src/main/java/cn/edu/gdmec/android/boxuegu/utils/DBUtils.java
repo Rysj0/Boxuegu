@@ -39,7 +39,7 @@ public class DBUtils {
     }
 
     public UserBean getUserInfo(String userName){
-        String sql = "SELECT * FROM" + SQLiteHelper.U_USERINFO +" WHERE userName=?";
+        String sql = "SELECT * FROM " + SQLiteHelper.U_USERINFO +" WHERE userName=?";
         Cursor cursor = db.rawQuery(sql,new String[]{userName});
         UserBean userBean = null;
         while (cursor.moveToNext()){
