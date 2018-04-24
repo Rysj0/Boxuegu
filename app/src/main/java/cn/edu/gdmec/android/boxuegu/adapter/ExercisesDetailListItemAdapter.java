@@ -23,6 +23,7 @@ public class ExercisesDetailListItemAdapter extends
     private Context context;
     private LayoutInflater layoutInflater;
     private OnSelectListener onSelectListener;
+    private OnItemListener onItemListener;
 
     public ExercisesDetailListItemAdapter(Context context, OnSelectListener onSelectListener) {
         this.context = context;
@@ -176,7 +177,9 @@ public class ExercisesDetailListItemAdapter extends
         holder.ivA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (onItemListener!=null){
+                    onItemListener.onItem(v,position);
+                }
                 if (selectedPosition.contains("" + position)) {
                     selectedPosition.remove("" + position);
                 } else {
@@ -189,7 +192,9 @@ public class ExercisesDetailListItemAdapter extends
         holder.ivB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (onItemListener!=null){
+                    onItemListener.onItem(v,position);
+                }
                 if (selectedPosition.contains("" + position)) {
                     selectedPosition.remove("" + position);
                 } else {
@@ -202,7 +207,9 @@ public class ExercisesDetailListItemAdapter extends
         holder.ivC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (onItemListener!=null){
+                    onItemListener.onItem(v,position);
+                }
                 if (selectedPosition.contains("" + position)) {
                     selectedPosition.remove("" + position);
                 } else {
@@ -215,7 +222,9 @@ public class ExercisesDetailListItemAdapter extends
         holder.ivD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                if (onItemListener!=null){
+                    onItemListener.onItem(v,position);
+                }
                 if (selectedPosition.contains("" + position)) {
                     selectedPosition.remove("" + position);
                 } else {
@@ -271,4 +280,14 @@ public class ExercisesDetailListItemAdapter extends
                        ImageView iv_b, ImageView iv_c,
                        ImageView iv_d);
     }
+    public interface OnItemListener{
+        void onItem(View view, int position);
+    }
+    public void setOnItemListener(OnItemListener onItemListener){
+        this.onItemListener=onItemListener;
+    }
+
+
+
+
 }

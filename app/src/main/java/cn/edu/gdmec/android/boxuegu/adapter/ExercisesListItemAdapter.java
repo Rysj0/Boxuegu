@@ -3,6 +3,7 @@ package cn.edu.gdmec.android.boxuegu.adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import java.util.List;
 import cn.edu.gdmec.android.boxuegu.activity.ActivityExercisesDetailActivity;
 import cn.edu.gdmec.android.boxuegu.Bean.ExercisesBean;
 import cn.edu.gdmec.android.boxuegu.R;
+import cn.edu.gdmec.android.boxuegu.utils.AnalysisUtils;
 
 public class ExercisesListItemAdapter extends BaseAdapter {
 
@@ -70,6 +72,15 @@ public class ExercisesListItemAdapter extends BaseAdapter {
         if (bean != null) {
             holder.tvOrder.setText(position + 1 + "");
             holder.tvTitle.setText(bean.title);
+            Log.i("readExercises",AnalysisUtils.readExercises(context,position+1)+"");
+            if (AnalysisUtils.readExercises(context,position+1)){
+                holder.tvContent.setText("已完成");
+            }else{
+                holder.tvContent.setText(bean.content);
+            }
+
+
+
             holder.tvOrder.setBackgroundResource(bean.background);
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -78,10 +89,11 @@ public class ExercisesListItemAdapter extends BaseAdapter {
                         return;
                     }
                     //跳转到习题界面
-                    Intent intent=new Intent(context, ActivityExercisesDetailActivity.class);
-                    intent.putExtra("id",bean.id);
-                    intent.putExtra("title",bean.title);
-                    ((Activity)context).startActivityForResult(intent,000);
+                    Intent intent = new Intent(context, ActivityExercisesDetailActivity.class);
+                    intent.putExtra("id", bean.id);
+                    intent.putExtra("title", bean.title);
+
+                    ((Activity) context).startActivityForResult(intent, 000);
                 }
             });
         }
