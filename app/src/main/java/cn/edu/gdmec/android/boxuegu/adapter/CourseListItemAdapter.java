@@ -1,6 +1,7 @@
 package cn.edu.gdmec.android.boxuegu.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import java.util.List;
 
 import cn.edu.gdmec.android.boxuegu.Bean.CourseBean;
 import cn.edu.gdmec.android.boxuegu.R;
+import cn.edu.gdmec.android.boxuegu.activity.VideoListActivity;
 
 public class CourseListItemAdapter extends
         RecyclerView.Adapter<CourseListItemAdapter.ViewHolder> {
@@ -56,7 +58,7 @@ public class CourseListItemAdapter extends
     }
 
 
-    private void initializeViews(CourseBean object, ViewHolder holder) {
+    private void initializeViews(final CourseBean object, ViewHolder holder) {
         //TODO implement
         if (object != null) {
             holder.tvCourseImgTitle.setText(object.imgTitle);
@@ -93,6 +95,15 @@ public class CourseListItemAdapter extends
                     holder.ivCourseImg.setImageResource(R.drawable.chapter_10_icon);
                     break;
             }
+            holder.ivCourseImg.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, VideoListActivity.class);
+                    intent.putExtra("id", object.id);
+                    intent.putExtra("intro", object.intro);
+                    context.startActivity(intent);
+                }
+            });
 
         }
     }
